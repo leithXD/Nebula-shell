@@ -11,7 +11,9 @@ PanelWindow {
     id: root
 
     //theming
-    Theming { id: theme }
+    Theming {
+        id: theme
+    }
 
     property color colBg: theme.colBg
     property color colCyan: theme.colCyan
@@ -21,11 +23,9 @@ PanelWindow {
     property color colMuted: theme.colMuted
     property string fontFamily: theme.fontFamily
     property int fontSize: theme.fontSize
-   
-    
+
     //system data
-    
-    
+
     // cpu
 
     anchors.top: true
@@ -39,18 +39,22 @@ PanelWindow {
         anchors.margins: 8
         spacing: 10
 
-        Logo { }
+        Logo {}
 
-        Workspaces { }
+        Workspaces {}
 
-        Item { Layout.fillWidth: true }
+        Item {
+            Layout.fillWidth: true
+        }
 
-        Clock { }
+        Clock {}
 
-        Item { Layout.fillWidth: true }
-        
-        Systemvitals { }
+        Item {
+            Layout.fillWidth: true
+        }
 
-        Powerbutton { }
+        Systemvitals {}
+
+        Powerbutton {}
     }
 }
