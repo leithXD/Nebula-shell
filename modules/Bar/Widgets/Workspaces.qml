@@ -6,12 +6,16 @@ import "../../../Core"
 RowLayout {
     id: root
 
-    Theming { id: theme }
+    Theming {
+        id: theme
+    }
 
     property color colCyan: theme.colCyan
     property color colPink: theme.colPink
     property color colMuted: theme.colMuted
     property int fontSize: theme.fontSize
+
+    anchors.verticalCenter: parent.verticalCenter
 
     spacing: 10
 
@@ -24,7 +28,10 @@ RowLayout {
 
             text: index + 1
             color: isActive ? root.colCyan : (ws ? root.colPink : root.colMuted)
-            font { pixelSize: root.fontSize; bold: true }
+            font {
+                pixelSize: root.fontSize
+                bold: true
+            }
 
             MouseArea {
                 anchors.fill: parent

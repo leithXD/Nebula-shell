@@ -6,6 +6,7 @@ import "../../../Services"
 
 RowLayout {
     spacing: 8
+    anchors.verticalCenter: parent.verticalCenter
 
     Theming {
         id: theme
@@ -22,7 +23,11 @@ RowLayout {
     Text {
         text: "CPU: " + cpu.cpuUsage + "%"
         color: theme.colYellow
-        font { family: theme.fontFamily; pixelSize: theme.fontSize; bold: true }
+        font {
+            family: theme.fontFamily
+            pixelSize: theme.fontSize
+            bold: true
+        }
     }
 
     Rectangle {
@@ -34,7 +39,11 @@ RowLayout {
     Text {
         text: "Mem: " + mem.memUsage + "%"
         color: theme.colCyan
-        font { family: theme.fontFamily; pixelSize: theme.fontSize; bold: true }
+        font {
+            family: theme.fontFamily
+            pixelSize: theme.fontSize
+            bold: true
+        }
     }
 
     Rectangle {
